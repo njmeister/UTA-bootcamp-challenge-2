@@ -76,7 +76,6 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1600px 200px;
     grid-row-gap: 50px;
-    margin-bottom: 300px;
 
     & section {
         position: relative;
@@ -128,7 +127,7 @@ main {
         justify-content: space-evenly;
 
         & p {
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
             text-decoration: underline;
         }
@@ -152,9 +151,8 @@ main {
         z-index: 1;
         top: 0px;
         right: 0px;
-        height: 660px;
-        width: 1100px;
-         object-fit: cover;
+        width: 100%;
+        object-fit: cover;
         position: absolute;
         opacity: 75%;
     }
@@ -164,8 +162,6 @@ main {
     }
 
     & #example2 {
-        height: 200;
-        width: 390;
         object-fit: cover;
         position: absolute;
         left: 0px;
@@ -249,10 +245,24 @@ main {
     }
 }
 
-footer section {
-    height: 300px;
-    position: fixed;
-    /* bottom: 0px; */
+#label {
     display: block;
-    background-color: brown;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: blue;
+    z-index: 5;
+    align-self: start;
+    justify-self: start;
+    left: 20%;
+    top: 30%;
+
+}
+
+footer section {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    display: block;
 }

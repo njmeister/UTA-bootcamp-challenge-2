@@ -52,7 +52,7 @@ header {
             display: inline-block;
             font-size: 50px;
             padding: 3px 10px;
-            text-wrap: none;
+            text-wrap: wrap;
         }
 
         & li:hover {
@@ -120,7 +120,6 @@ main {
 
         & p {
             margin: 20px;
-            background-color: aquamarine;
             font-size: 20px;
         }
     }
@@ -142,11 +141,14 @@ main {
         top: 0px;
         height: 1600px;
         object-fit: cover;
+        /* opacity: 50%; */
+    }
+
+    & .portfolio #sectionBody section:hover {
+        opacity: 100%;
     }
 
     & #primeExample {
-        
-        background-color: gold;
         z-index: 1;
         top: 0px;
         right: 0px;
@@ -154,9 +156,14 @@ main {
         width: 1100px;
          object-fit: cover;
         position: absolute;
+        opacity: 75%;
+    }
+    
+    & #primeExample:hover {
+        opacity: 100%;
     }
 
-     & #example2 {
+    & #example2 {
         height: 200;
         width: 390;
         object-fit: cover;
@@ -164,6 +171,11 @@ main {
         left: 0px;
         top: 700px;
         z-index: 2;
+        opacity: 75%;
+    }
+
+    & #example2:hover {
+        opacity: 100%;
     }
 
     & #example3 {
@@ -173,15 +185,25 @@ main {
         right: 0px;
         top: 700px;
         z-index: 2;
+        opacity: 75%;
     }
 
-     & #example4 {
+    & #example3:hover {
+        opacity: 100%;
+    }
+
+    & #example4 {
         height: 275px;
         width: 535px;
         position: absolute;
         left: 0px;
         top: 1000px;
         z-index: 2;
+        opacity: 75%;
+    }
+
+    & #example4:hover {
+        opacity: 100%;
     }
 
     & #example5 {
@@ -191,6 +213,11 @@ main {
         right: 0px;
         top: 1000px;
         z-index: 2;
+        opacity: 75%;
+    }
+
+    & #example5:hover {
+        opacity: 100%;
     }
 
     & #example6 {
@@ -200,6 +227,11 @@ main {
         left: 0px;
         top: 1300px;
         z-index: 2;
+        opacity: 75%;
+    }
+
+    & #example6:hover {
+        opacity: 100%;
     }
 
     & #example7 {
@@ -209,8 +241,12 @@ main {
         right: 0px;
         top: 1300px;
         z-index: 2;
+        opacity: 75%;
     }
 
+    & #example7:hover {
+        opacity: 100%;
+    }
 }
 
 footer section {

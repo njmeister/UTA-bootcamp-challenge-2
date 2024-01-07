@@ -47,6 +47,7 @@ header {
         list-style: none;
         margin-left: 50px;
         text-wrap: none;
+        text-align: right;
 
         & li {
             display: inline-block;
@@ -72,197 +73,343 @@ main {
     position: relative;
     width: 90%;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 1600px 200px;
-    grid-row-gap: 50px;
+    display: block;
 
-    & section {
+    & .aboutMe {
         position: relative;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        justify-items: end;
-        align-items: center;
+        display: block;
+        height: 300px;
+        margin-bottom: 50px;
+
+        & #sectionBody p {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            text-align: right;
+            font-size: 30px;
+            margin: 5% 50px 5% 100px;
+        }
+    }
+
+    & .portfolio {
+        position: relative;
+        display: block;
+        height: 1300px;
+        margin-bottom: 50px;
+
+        & #sectionBody {
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+
+            & #primeExample {
+                width: 100%;
+                height: 38%;
+                position: relative;
+            }
+
+                & #primeExample::before {
+                    content: "";
+                    background-image: url(./images/Sample1.jpg);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #primeExample:hover::before {
+                    opacity: 1;
+                }
+
+            & #label {
+                position: absolute;                    
+                padding: 20px 50px 20px 20px;
+                bottom: 5%;
+                background-color: rgba(0, 0, 0, 0.75);
+                left: 0px;
+                z-index: 5;
+                color: yellow;
+
+                & h3 {
+                    font-size: 30px;
+                    margin-bottom: 8px;
+                }
+
+                & p {
+                    font-size: 20px;
+                }
+            }
+
+            & #example2 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 40%;
+                left: 0%;
+            }
+
+                & #example2::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example2:hover::before {
+                    opacity: 1;
+                }
+
+            & #example3 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 40%;
+                right: 0%;
+            }
+
+                & #example3::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example3:hover::before {
+                    opacity: 1;
+                }
+
+            & #example4 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 60%;
+                left: 0%;
+            }
+
+                & #example4::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example4:hover::before {
+                    opacity: 1;
+                }
+
+            & #example5 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 60%;
+                right: 0%;
+            }
+
+                & #example5::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example5:hover::before {
+                    opacity: 1;
+                }
+
+            & #example6 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 80%;
+                left: 0%;
+            }
+
+                & #example6::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example6:hover::before {
+                    opacity: 1;
+                }
+
+            & #example7 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 80%;
+                right: 0%;
+            }
+
+                & #example7::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example7:hover::before {
+                    opacity: 1;
+                }
+        }
+    }
+
+    & .contactMe {
+        display: inline-block;
+        position: relative;
+        height: 300px;
+        width: 100%;
+        margin-bottom: 50px;
+        
+        & #sectionBody {
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            width: 75%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & p {
+                font-size: 30px;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
     }
 
     & #sectionHead {
-        position: absolute;
         height: 100%;
-        width: 15%;
+        width: 25%;
+        margin-bottom: 50px;
         border-right: 10px solid black;
         text-align: right;
-        justify-self: end;
-        align-self: center;
-        margin: 0%;
-        padding: 0%;
-        left: 0%;
+        position: relative;
 
         & h2 {
-            position: absolute;
-            justify-self: end;
-            align-self: center;
+            position: relative;
             right: 10px;
             top: 20px;
         }
     }
-
-    & #sectionBody {
-        position: absolute;
-        width: 75%;
-        height: 100%;
-        left: 25%;
-
-        text-align: right;
-
-        display: flex;
-        justify-content: flex-end;
-
-        & p {
-            margin: 20px;
-            font-size: 20px;
-        }
-    }
-
-    & .contactMe #sectionBody {
-        justify-content: space-evenly;
-
-        & p {
-            font-size: 40px;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    }
-
-    & .portfolio #sectionBody section {
-        position: absolute;
-        width: 1100px;
-        right: 0px;
-        top: 0px;
-        height: 1600px;
-        object-fit: cover;
-        /* opacity: 50%; */
-    }
-
-    & .portfolio #sectionBody section:hover {
-        opacity: 100%;
-    }
-
-    & #primeExample {
-        z-index: 1;
-        top: 0px;
-        right: 0px;
-        width: 100%;
-        object-fit: cover;
-        position: absolute;
-        opacity: 75%;
-    }
-    
-    & #primeExample:hover {
-        opacity: 100%;
-    }
-
-    & #example2 {
-        object-fit: cover;
-        position: absolute;
-        left: 0px;
-        top: 700px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example2:hover {
-        opacity: 100%;
-    }
-
-    & #example3 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 700px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example3:hover {
-        opacity: 100%;
-    }
-
-    & #example4 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        left: 0px;
-        top: 1000px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example4:hover {
-        opacity: 100%;
-    }
-
-    & #example5 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 1000px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example5:hover {
-        opacity: 100%;
-    }
-
-    & #example6 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        left: 0px;
-        top: 1300px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example6:hover {
-        opacity: 100%;
-    }
-
-    & #example7 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 1300px;
-        z-index: 2;
-        opacity: 75%;
-    }
-
-    & #example7:hover {
-        opacity: 100%;
-    }
 }
 
-#label {
-    display: block;
-    position: absolute;
-    height: 100px;
-    width: 200px;
-    background-color: blue;
-    z-index: 5;
-    align-self: start;
-    justify-self: start;
-    left: 20%;
-    top: 30%;
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: aquamarine;
 
-}
+        & .aboutMe {
+            
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px solid black;
+                border-bottom: 10px solid black;
+            }
 
-footer section {
-    height: 100px;
-    width: 100%;
-    position: relative;
-    bottom: 0px;
-    display: block;
+            & #sectionBody {
+                display: block;
+                position: relative;
+            }
+        }
+
+        & .portfolio {
+
+            display: block;
+            position: relative;
+
+
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px;
+                border-bottom: 10px solid black;
+
+            }
+
+            & #sectionBody {
+                display: block;
+                position: relative;
+                width: 100%;
+                margin-bottom: 2000px;
+
+                & #primeExample {
+                    position: relative;
+                }
+            }
+        }
+
+
+        & .contactMe {
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 1850px;
+            bottom: 0%;
+
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px;
+                border-bottom: 10px solid black;
+
+            }
+
+            & #sectionBody {
+                display: block;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
 }

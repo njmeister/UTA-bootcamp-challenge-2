@@ -47,12 +47,13 @@ header {
         list-style: none;
         margin-left: 50px;
         text-wrap: none;
+        text-align: right;
 
         & li {
             display: inline-block;
             font-size: 50px;
             padding: 3px 10px;
-            text-wrap: none;
+            text-wrap: wrap;
         }
 
         & li:hover {
@@ -72,151 +73,422 @@ main {
     position: relative;
     width: 90%;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 1600px 200px;
-    grid-row-gap: 50px;
-    margin-bottom: 300px;
+    display: block;
 
-    & section {
+    & .aboutMe {
         position: relative;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        justify-items: end;
-        align-items: center;
+        display: block;
+        height: 300px;
+        margin-bottom: 50px;
+
+        & #sectionBody { 
+            
+            & img {
+                position: absolute;
+                height: 250px;
+                width: 250px;
+                object-fit: cover;
+                border-radius: 100%;
+                top: 0%;
+                left: 30%;
+            }
+
+            & p {
+                position: absolute;
+                width: 40%;
+                top: 0%;
+                right: 0%;
+                text-align: right;
+                font-size: 30px;
+                margin: 5% 50px 5% 100px;
+            }
+        }
+    }
+
+    & .portfolio {
+        position: relative;
+        display: block;
+        height: 1300px;
+        margin-bottom: 50px;
+
+        & #sectionBody {
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+
+            & #primeExample {
+                width: 100%;
+                height: 38%;
+                position: relative;
+            }
+
+                & #primeExample::before {
+                    content: "";
+                    background-image: url(./images/thisSite.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #primeExample:hover::before {
+                    opacity: 1;
+                }
+
+            & #label {
+                position: absolute;                    
+                padding: 20px 50px 20px 20px;
+                bottom: 5%;
+                background-color: rgba(0, 0, 0, 0.75);
+                left: 0px;
+                z-index: 5;
+                color: var(--accentBlue);
+
+                & h3 {
+                    font-size: 30px;
+                    margin-bottom: 8px;
+                }
+
+                & p {
+                    font-size: 20px;
+                }
+            }
+
+            & #example2 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 40%;
+                left: 0%;
+            }
+
+                & #example2::before {
+                    content: "";
+                    background-image: url(./images/Sample6.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example2:hover::before {
+                    opacity: 1;
+                }
+
+            & #example3 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 40%;
+                right: 0%;
+            }
+
+                & #example3::before {
+                    content: "";
+                    background-image: url(./images/Sample1.jpg);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example3:hover::before {
+                    opacity: 1;
+                }
+
+            & #example4 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 60%;
+                left: 0%;
+            }
+
+                & #example4::before {
+                    content: "";
+                    background-image: url(./images/Sample2.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example4:hover::before {
+                    opacity: 1;
+                }
+
+            & #example5 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 60%;
+                right: 0%;
+            }
+
+                & #example5::before {
+                    content: "";
+                    background-image: url(./images/Sample3.jpg);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example5:hover::before {
+                    opacity: 1;
+                }
+
+            & #example6 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 80%;
+                left: 0%;
+            }
+
+                & #example6::before {
+                    content: "";
+                    background-image: url(./images/Sample4.jpg);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example6:hover::before {
+                    opacity: 1;
+                }
+
+            & #example7 {
+                position: absolute;
+                width: 49%;
+                height: 18%;
+                display: inline-block;
+                top: 80%;
+                right: 0%;
+            }
+
+                & #example7::before {
+                    content: "";
+                    background-image: url(./images/Sample7.png);
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    opacity: 0.75;
+                }
+
+                & #example7:hover::before {
+                    opacity: 1;
+                }
+        }
+    }
+
+    & .contactMe {
+        display: inline-block;
+        position: relative;
+        height: 300px;
+        width: 100%;
+        margin-bottom: 50px;
+        
+        & #sectionBody {
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            width: 75%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & p {
+                font-size: 30px;
+                text-decoration: underline;
+                font-weight: bold;
+                color: var(--mainBlue)
+            }
+        }
     }
 
     & #sectionHead {
-        position: absolute;
         height: 100%;
-        width: 15%;
+        width: 25%;
+        margin-bottom: 50px;
         border-right: 10px solid black;
         text-align: right;
-        justify-self: end;
-        align-self: center;
-        margin: 0%;
-        padding: 0%;
-        left: 0%;
+        position: relative;
 
         & h2 {
-            position: absolute;
-            justify-self: end;
-            align-self: center;
+            position: relative;
             right: 10px;
             top: 20px;
+            color: black;
         }
     }
-
-    & #sectionBody {
-        position: absolute;
-        width: 75%;
-        height: 100%;
-        left: 25%;
-
-        text-align: right;
-
-        display: flex;
-        justify-content: flex-end;
-
-        & p {
-            margin: 20px;
-            background-color: aquamarine;
-            font-size: 20px;
-        }
-    }
-
-    & .contactMe #sectionBody {
-        justify-content: space-evenly;
-
-        & p {
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    }
-
-    & .portfolio #sectionBody section {
-        position: absolute;
-        width: 1100px;
-        right: 0px;
-        top: 0px;
-        height: 1600px;
-        object-fit: cover;
-    }
-
-    & #primeExample {
-        
-        background-color: gold;
-        z-index: 1;
-        top: 0px;
-        right: 0px;
-        height: 660px;
-        width: 1100px;
-         object-fit: cover;
-        position: absolute;
-    }
-
-     & #example2 {
-        height: 200;
-        width: 390;
-        object-fit: cover;
-        position: absolute;
-        left: 0px;
-        top: 700px;
-        z-index: 2;
-    }
-
-    & #example3 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 700px;
-        z-index: 2;
-    }
-
-     & #example4 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        left: 0px;
-        top: 1000px;
-        z-index: 2;
-    }
-
-    & #example5 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 1000px;
-        z-index: 2;
-    }
-
-    & #example6 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        left: 0px;
-        top: 1300px;
-        z-index: 2;
-    }
-
-    & #example7 {
-        height: 275px;
-        width: 535px;
-        position: absolute;
-        right: 0px;
-        top: 1300px;
-        z-index: 2;
-    }
-
 }
 
-footer section {
-    height: 300px;
-    position: fixed;
-    /* bottom: 0px; */
-    display: block;
-    background-color: brown;
+@media screen and (max-width: 1000px) {
+    body {
+
+        & .aboutMe {
+
+            height: 400px;
+            
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px solid black;
+                border-bottom: 10px solid black;
+                text-align: center;
+            }
+
+            & #sectionBody {
+                display: block;
+                position: relative;
+                width: auto;
+
+                & p {
+                    text-align: right;
+                    margin-top: 5%;
+                }
+
+                & img {
+                    left: 5%;
+                }
+            }
+        }
+
+        & .portfolio {
+
+            display: block;
+            position: relative;
+
+
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px;
+                border-bottom: 10px solid black;
+                text-align: center;
+
+            }
+
+            & #sectionBody {
+                display: block;
+                position: relative;
+                width: 100%;
+
+                & #primeExample {
+                    position: relative;
+                }
+            }
+        }
+
+
+        & .contactMe {
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 1950px;
+            bottom: 0%;
+
+            & #sectionHead {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
+                border-right: 0px;
+                border-bottom: 10px solid black;
+                text-align: center;
+
+            }
+
+            & #sectionBody {
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 700px) {
+
+    header {
+        
+        & h1 {
+            font-size: 50px;
+        }
+
+        & nav li {
+            font-size: 30px;
+        }
+    }
+
+    #sectionHead {
+
+        & h2 {
+            font-size: 40px;
+        }
+    }
+    
+    main .aboutMe #sectionBody p {
+        font-size: 20px;
+    }
+
+    main .contactMe #sectionBody p {
+        font-size: 25px;
+    }
+
+    main .portfolio #sectionBody #label {                  
+        padding: 15px 25px 15px 15px;
+        z-index: 5;
+
+        & h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        & p {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    body main #sectionHead {
+        width: 20%;
+    }
 }

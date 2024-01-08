@@ -81,13 +81,27 @@ main {
         height: 300px;
         margin-bottom: 50px;
 
-        & #sectionBody p {
-            position: absolute;
-            top: 0%;
-            right: 0%;
-            text-align: right;
-            font-size: 30px;
-            margin: 5% 50px 5% 100px;
+        & #sectionBody { 
+            
+            & img {
+                position: absolute;
+                height: 250px;
+                width: 250px;
+                object-fit: cover;
+                border-radius: 100%;
+                top: 0%;
+                left: 30%;
+            }
+
+            & p {
+                position: absolute;
+                width: 40%;
+                top: 0%;
+                right: 0%;
+                text-align: right;
+                font-size: 30px;
+                margin: 5% 50px 5% 100px;
+            }
         }
     }
 
@@ -112,7 +126,7 @@ main {
 
                 & #primeExample::before {
                     content: "";
-                    background-image: url(./images/Sample1.jpg);
+                    background-image: url(./images/thisSite.png);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -133,7 +147,7 @@ main {
                 background-color: rgba(0, 0, 0, 0.75);
                 left: 0px;
                 z-index: 5;
-                color: yellow;
+                color: var(--accentBlue);
 
                 & h3 {
                     font-size: 30px;
@@ -181,7 +195,7 @@ main {
 
                 & #example3::before {
                     content: "";
-                    background-image: url(./images/Sample6.png);
+                    background-image: url(./images/Sample1.jpg);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -206,7 +220,7 @@ main {
 
                 & #example4::before {
                     content: "";
-                    background-image: url(./images/Sample6.png);
+                    background-image: url(./images/Sample2.png);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -231,7 +245,7 @@ main {
 
                 & #example5::before {
                     content: "";
-                    background-image: url(./images/Sample6.png);
+                    background-image: url(./images/Sample3.jpg);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -256,7 +270,7 @@ main {
 
                 & #example6::before {
                     content: "";
-                    background-image: url(./images/Sample6.png);
+                    background-image: url(./images/Sample4.jpg);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -281,7 +295,7 @@ main {
 
                 & #example7::before {
                     content: "";
-                    background-image: url(./images/Sample6.png);
+                    background-image: url(./images/Sample7.png);
                     background-size: cover;
                     position: absolute;
                     top: 0px;
@@ -318,6 +332,7 @@ main {
                 font-size: 30px;
                 text-decoration: underline;
                 font-weight: bold;
+                color: var(--mainBlue)
             }
         }
     }
@@ -334,15 +349,17 @@ main {
             position: relative;
             right: 10px;
             top: 20px;
+            color: black;
         }
     }
 }
 
 @media screen and (max-width: 1000px) {
     body {
-        background-color: aquamarine;
 
         & .aboutMe {
+
+            height: 400px;
             
             & #sectionHead {
                 position: relative;
@@ -351,11 +368,22 @@ main {
                 height: 100px;
                 border-right: 0px solid black;
                 border-bottom: 10px solid black;
+                text-align: center;
             }
 
             & #sectionBody {
                 display: block;
                 position: relative;
+                width: auto;
+
+                & p {
+                    text-align: right;
+                    margin-top: 5%;
+                }
+
+                & img {
+                    left: 5%;
+                }
             }
         }
 
@@ -372,6 +400,7 @@ main {
                 height: 100px;
                 border-right: 0px;
                 border-bottom: 10px solid black;
+                text-align: center;
 
             }
 
@@ -379,7 +408,6 @@ main {
                 display: block;
                 position: relative;
                 width: 100%;
-                margin-bottom: 2000px;
 
                 & #primeExample {
                     position: relative;
@@ -392,7 +420,7 @@ main {
             width: 100%;
             display: block;
             position: absolute;
-            top: 1850px;
+            top: 1950px;
             bottom: 0%;
 
             & #sectionHead {
@@ -402,14 +430,65 @@ main {
                 height: 100px;
                 border-right: 0px;
                 border-bottom: 10px solid black;
+                text-align: center;
 
             }
 
             & #sectionBody {
-                display: block;
+                display: flex;
+                align-items: flex-start;
                 position: relative;
                 width: 100%;
             }
         }
+    }
+}
+
+@media  screen and (max-width: 700px) {
+
+    header {
+        
+        & h1 {
+            font-size: 50px;
+        }
+
+        & nav li {
+            font-size: 30px;
+        }
+    }
+
+    #sectionHead {
+
+        & h2 {
+            font-size: 40px;
+        }
+    }
+    
+    main .aboutMe #sectionBody p {
+        font-size: 20px;
+    }
+
+    main .contactMe #sectionBody p {
+        font-size: 25px;
+    }
+
+    main .portfolio #sectionBody #label {                  
+        padding: 15px 25px 15px 15px;
+        z-index: 5;
+
+        & h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        & p {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    body main #sectionHead {
+        width: 20%;
     }
 }
